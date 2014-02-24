@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">La Ruche Numérique</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_events">Events</string>
+    <string name="button_news">News</string>
+    <string name="button_infos">Infos</string>
+    <string name="button_come">Come at the Ruche</string>
+
+    <!-- String infos -->
+    <string name="lblAddress">Address</string>
+    <string name="district">Business district Novaxis</string>
+    <string name="building">Building "La Persée" – 1st floor</string>
+    <string name="address">
+        19 Boulevard Marie et Alexandre Oyon, 72000 Le Mans
+    </string>
+    <string name="lblPhone">Phone</string>
+    <string name="phone">+33 243 210 001</string>
+    <string name="lblMail">Mail</string>
+    <string name="mail">contact@laruchenumerique.fr</string>
+ 
+    <string name="description">1st floor</string>
+    
+    <!-- News -->
+    <string name="newsErrorConnectionUpdate">
+        We can\'t download the news, try again
+    </string>
+    <string name="newsSuccessConnectionUpdate">
+        News are update
+    </string>
+    <string name="errorConnectionDatabase">
+        An error occured, try again
+    </string>
+    <string name="buttonDetails">
+        More details
+    </string>
+    
+    <!-- Event -->
+    <string name="eventErrorConnectionUpdate">
+        We can\'t download the events, try again
+    </string>
+    <string name="eventSuccessConnectionUpdate">
+        Events are update
+    </string>
+    
+    <!-- Date -->
+    <string name="formatDate">
+        MMM dd yyyy
+    </string>
+    <string name="formatTime">
+        K:mm a
+    </string>
+</resources>

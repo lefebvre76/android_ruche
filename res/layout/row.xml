@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/row_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="DD"
+        android:textColor="@color/orange" />
+
+    <TextView
+        android:id="@+id/row_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/row_day"
+        android:layout_below="@+id/row_day"
+        android:paddingBottom="10dp"
+        android:text="MMM"
+        android:textColor="@color/violet" />
+
+    <TextView
+        android:id="@+id/row_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/row_day"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/row_month"
+        android:text="My title"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@color/grey"/>
+
+</RelativeLayout>

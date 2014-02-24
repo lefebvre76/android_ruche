@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageCCI"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_cci" />
+
+    <ImageView
+        android:id="@+id/imageCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/center" />
+
+    <ImageButton
+        android:id="@+id/imageEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageCenter"
+        android:layout_alignRight="@+id/imageCenter"
+        android:background="@drawable/button_events"
+        android:padding="25dp"
+        android:paddingBottom="25dp"
+        android:paddingLeft="25dp" />
+
+    <ImageButton
+        android:id="@+id/imageNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageEvent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_toRightOf="@+id/imageEvent"
+        android:background="@drawable/button_news" />
+
+    <ImageButton
+        android:id="@+id/imageInfos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageCenter"
+        android:layout_alignTop="@+id/imageCenter"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="-14dp"
+        android:background="@drawable/button_infos" />
+
+    <ImageButton
+        android:id="@+id/imageCome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageCenter"
+        android:layout_below="@+id/imageCenter"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="-24dp"
+        android:background="@drawable/button_come" />
+
+    <Button
+        android:id="@+id/Come"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageCome"
+        android:layout_below="@+id/imageCome"
+        android:background="@android:color/transparent"
+        android:text="@string/button_come"
+        android:textColor="@color/green"
+        android:textColorLink="@color/green" />
+
+    <Button
+        android:id="@+id/Infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageInfos"
+        android:layout_toLeftOf="@+id/imageInfos"
+        android:background="@android:color/transparent"
+        android:text="@string/button_infos"
+        android:textColor="@color/grey"
+        android:textColorLink="@color/grey" />
+
+    <Button
+        android:id="@+id/Events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageEvent"
+        android:layout_alignLeft="@+id/imageTitle"
+        android:background="@android:color/transparent"
+        android:text="@string/button_events"
+        android:textColor="@color/orange"
+        android:textColorLink="@color/orange" />
+
+    <ImageView
+        android:id="@+id/imageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ruche_title" />
+
+    <Button
+        android:id="@+id/News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageNews"
+        android:layout_alignRight="@+id/imageNews"
+        android:background="@android:color/transparent"
+        android:textColor="@color/violet"
+        android:text="@string/button_news" />
+
+</RelativeLayout>

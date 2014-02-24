@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<project name="rucheNumerique" default="all">
+	<property name="path.quality" value="quality"/>
+	<property name="path.compile" value="${path.quality}/bin"/>
+	<property name="path.src" value="src"/>
+	<property name="path.rep" value="${path.quality}/rep"/>
+	<property name="path.junit" value="${path.rep}/junit"/>
+	<property name="path.checkstyle" value="${path.rep}/checkstyle"/>
+	<property name="path.pmd" value="${path.rep}/pmd"/>
+	<property name="path.jar" value="${path.quality}/ruche.jar"/>
+	<property name="path.doc" value="${path.quality}/doc"/>
+
+	
+	<path id="classpath.tests">
+		<pathelement location="libs/junit-4.11.jar"/>
+		<pathelement location="libs/hamcrest-core-1.3.jar"/>
+	</path>
+
+    <!--<path id="classpath.JUnit">
+       	<pathelement location="libs/junit-4.11.jar"/>
+       	
+       	<pathelement location="${path.compile}"/>
+    </path>-->
+
+	<!-- Remake the project at the begining -->
+	<target name="clean">
+		<delete dir="${path.quality}"/>
+		<mkdir dir="${path.quality}" />
+	</target>
+
+	<!-- Compile -->
+	<target name="compile">
+		<mkdir dir="${path.compile}"/>
+		<javac srcdir ="${path.src}" destdir="${path.compile}"
+			includeantruntime="false">
+			<classpath refid="classpath.tests"/>
+		</javac>
+	</target>
+
+	<!-- Javadoc -->	
+	<target name="javadoc">
+		<mkdir dir="${path.doc}"/>
+		<javadoc destdir="${path.doc}" author="true" version="true" use="true"
+			package="true">
+			<fileset dir = "${path.src}">
+				<include name="**/*.java"/>
+			</fileset>
+		</javadoc>
+	</target>
+
+	<!-- pmd -->
+	<path id="pmd.classpath">
+		<pathelement location="${build}"/>
+		<fileset dir="libs/PMD/">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"
+		classpathref="pmd.classpath"/>
+	
+	<target name="pmd">
+		<mkdir dir="${path.pmd}"/>
+		<pmd rulesetfiles="rulesets/java/android.xml">
+			<formatter type="xml" toFile="${path.pmd}/pmd_report.xml"/>
+			<fileset dir="${path.src}">
+				<include name="**/*.java"/>
+			</fileset>
+		</pmd>
+	</target>
+
+	<!-- CheckStyle -->
+	<taskdef resource="checkstyletask.properties"
+		classpath="./libs/checkstyle-5.7-all.jar"/>
+	<target name="checkstyle">
+		<mkdir dir="${path.checkstyle}"/>
+		<checkstyle config="libs/sun_checks.xml" failOnViolation="false">
+			<fileset dir="${path.src}" includes="**/*.java"/>
+			<formatter type="xml"
+				toFile="${path.checkstyle}/checkstyle_errors.xml"/>
+		</checkstyle>
+	</target>
+
+</project>

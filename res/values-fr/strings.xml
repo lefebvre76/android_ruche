@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">La Ruche Numérique</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_events">Les évènements</string>
+    <string name="button_news">Les news</string>
+    <string name="button_infos">Infos</string>
+    <string name="button_come">Venir à la ruche</string>
+    
+    <!-- String infos -->
+    <string name="lblAddress">Adresse</string>
+    <string name="district">Quartier d’affaires Novaxis</string>
+    <string name="building">Bâtiment "La Persée" – 1er étage</string>
+    <string name="address">
+        19 Boulevard Marie et Alexandre Oyon, 72000 Le Mans
+    </string>
+    <string name="lblPhone">Téléphone</string>
+    <string name="phone">02.43.21.00.01</string>
+    <string name="lblMail">E-mail</string>
+    <string name="mail">contact@laruchenumerique.fr</string>
+    
+    <string name="description">1er étage</string>
+        
+	  <!-- News -->
+    <string name="newsErrorConnectionUpdate">
+        Connexion impossible, réessayez
+    </string>
+    <string name="newsSuccessConnectionUpdate">
+        Les news sont à jour
+    </string>
+    <string name="errorConnectionDatabase">
+        Une erreur est survenue, réessayez
+    </string>
+    <string name="buttonDetails">
+        Plus de détails
+    </string>
+    
+    <!-- Event -->
+    <string name="eventErrorConnectionUpdate">
+        Connexion impossible, réessayez
+    </string>
+    <string name="eventSuccessConnectionUpdate">
+        Les évènements sont à jour
+    </string>
+    
+    <!-- Date -->
+    <string name="formatDate">
+        dd MMM yyyy
+    </string>
+    <string name="formatTime">
+        H:mm
+    </string>
+    
+</resources>

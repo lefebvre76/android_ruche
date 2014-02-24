@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtViewDateEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtViewTitleEvent"
+        android:textColor="@color/orange"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="13dp"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/txtViewTitleEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/txtViewDateEvent"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="27dp"
+        android:text="Title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/violet" />
+
+    <TextView
+        android:id="@+id/txtViewDescriptionEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViewTitleEvent"
+        android:layout_alignRight="@+id/txtViewDateEvent"
+        android:layout_below="@+id/txtViewDateEvent"
+        android:layout_marginTop="14dp"
+        android:text="Description"
+        android:textColor="@color/grey" />
+
+    <Button
+        android:id="@+id/buttonDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViewDescriptionEvent"
+        android:layout_alignRight="@+id/txtViewDescriptionEvent"
+        android:layout_below="@+id/txtViewDescriptionEvent"
+        android:layout_marginTop="15dp"
+        android:text="@string/buttonDetails"
+        android:textColor="@color/blue"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>
